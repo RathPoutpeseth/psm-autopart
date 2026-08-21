@@ -3,7 +3,7 @@
 This turns your prototype into a real, hosted app with individual staff logins.
 No coding needed — just follow the steps below in order. Expect ~20–30 minutes.
 
----
+---  
 
 ## Part 1 — Create your database (Supabase)
 
