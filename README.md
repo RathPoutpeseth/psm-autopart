@@ -3,12 +3,12 @@
 This turns your prototype into a real, hosted app with individual staff logins.
 No coding needed — just follow the steps below in order. Expect ~20–30 minutes.
 
----
+--- 
 
-## Part 1 — Create your database (Supabase)
+## Part 1 — Create your database (Supabase) 
 
 1. Go to https://supabase.com and click **Start your project**. Sign up (free).
-2. Click **New project**. Give it a name (e.g. "shop-floor"), set a database password
+2. Click **New project**. Give it a name (e.g. "shop-floor"), set a database password 
    (save this somewhere safe), pick a region close to you, and click **Create new project**.
    Wait ~2 minutes while it sets up.
 3. In the left sidebar, click the **SQL Editor** icon.
