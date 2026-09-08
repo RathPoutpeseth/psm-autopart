@@ -1,0 +1,67 @@
+/* Mobile breakpoint overrides. These use !important because most of the
+   app's layout is inline-styled — !important is the only way a stylesheet
+   rule can win against an inline style, and that's intentional here. */
+
+@media (max-width: 720px) {
+  /* Sidebar becomes a horizontal scrollable bar instead of a fixed left column */
+  .app-sidebar {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-right: none !important;
+    border-bottom: 1px solid #33383e;
+    padding: 8px !important;
+    gap: 4px;
+  }
+  .app-sidebar .nav-item {
+    flex: 0 0 auto;
+    margin-bottom: 0 !important;
+    white-space: nowrap;
+  }
+  .app-layout {
+    flex-direction: column !important;
+  }
+
+  /* Header: let it wrap instead of overflowing */
+  .app-header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 14px !important;
+  }
+  .app-header-right {
+    width: 100%;
+    justify-content: space-between !important;
+  }
+
+  /* Main content area gets less padding on small screens */
+  .app-content {
+    padding: 14px !important;
+  }
+
+  /* Multi-column forms collapse to a single column */
+  .form-grid-4, .form-grid-5, .form-grid-6 {
+    grid-template-columns: 1fr !important;
+  }
+  .form-grid-4 > *, .form-grid-5 > *, .form-grid-6 > * {
+    grid-column: span 1 !important;
+  }
+
+  /* Fixed-width fields (search boxes, small number inputs) go full width so
+     they don't force horizontal scrolling inside a form row */
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  /* Tables: slightly smaller text so more columns fit before scrolling kicks in */
+  table {
+    font-size: 12px;
+  }
+
+  /* Stat cards and dashboard cards: allow them to take full width instead of
+     being squeezed to a sliver next to their neighbors */
+  .stat-row > * {
+    flex-basis: 100% !important;
+  }
+}
